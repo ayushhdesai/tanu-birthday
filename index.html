@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy 25th, Tanu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Serif+Display:ital@0;1&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#f6e4e0;color:#3a1e24;font-family:Jost,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#b0465a}a:hover{color:#8f3446}
+img{display:block}
+@keyframes flick{0%,100%{transform:scaleY(1) rotate(-2deg)}50%{transform:scaleY(1.15) rotate(2deg)}}
+@keyframes fall{0%{transform:translateY(-10vh) rotate(0)}100%{transform:translateY(110vh) rotate(540deg)}}
+@keyframes rise{0%{opacity:0;transform:translateY(16px)}100%{opacity:1;transform:none}}
+</style>
+</helmet>
+<div style="min-height:100vh;overflow-x:hidden;background-image:radial-gradient(rgba(176,70,90,.07) 1px,transparent 1px);background-size:18px 18px">
+
+<sc-if value="{{ isCover }}" hint-placeholder-val="{{ true }}">
+<div data-screen-label="01 Cover" style="min-height:100vh;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(28px,6vw,56px);padding:clamp(40px,8vw,64px) 24px 64px">
+<div style="flex:1 1 320px;max-width:480px;display:flex;flex-direction:column;gap:18px">
+<div style="font-family:Caveat,cursive;font-size:34px;color:#b0465a">psst, birthday girl…</div>
+<div style="font-family:'DM Serif Display',serif;font-size:clamp(76px,13vw,128px);line-height:.9">Tanu<br><span style="font-style:italic;color:#b0465a">at 25</span></div>
+<div style="font-size:17px;line-height:1.6;color:#6b4a50;max-width:380px;text-wrap:pretty">It's October 16th, and the world got a little brighter twenty-five years ago today. I made you something. Take your time with it.</div>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+<div onClick="{{ next }}" style="font-size:16px;font-weight:500;color:#fff;background:#b0465a;padding:16px 34px;border-radius:999px;cursor:pointer;user-select:none;white-space:nowrap" style-hover="background:#8f3446">Open it ♡</div>
+</div>
+</div>
+<div style="flex:0 1 380px;position:relative;height:clamp(420px,115vw,500px);max-width:100%">
+<div style="position:absolute;left:8%;top:10px;width:78%;background:#fff;padding:12px 12px 58px;box-shadow:0 10px 30px rgba(80,30,40,.18);transform:rotate(4deg)">
+<img src="img/p06.jpeg" alt="Tanu" style="width:100%;aspect-ratio:4/5;object-fit:cover"><div style="position:absolute;bottom:12px;left:0;right:0;text-align:center;font-family:Caveat,cursive;font-size:28px">my favorite person</div></div>
+<div style="position:absolute;left:34%;top:-4px;width:110px;height:30px;background:rgba(240,195,185,.8);transform:rotate(-6deg)"></div>
+<div style="position:absolute;left:-4%;bottom:0;width:42%;background:#fff;padding:8px 8px 30px;box-shadow:0 8px 22px rgba(80,30,40,.18);transform:rotate(-8deg)">
+<img src="img/p09.jpeg" alt="Us" style="width:100%;aspect-ratio:3/4;object-fit:cover"></div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isLetter }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="02 Letter" style="padding:56px 20px 140px;display:flex;flex-direction:column;align-items:center;gap:40px">
+<div style="text-align:center;display:flex;flex-direction:column;gap:6px;width:100%;max-width:900px;margin-bottom:16px">
+<div style="font-family:Caveat,cursive;font-size:30px;color:#b0465a">chapter one</div>
+<div style="font-family:'DM Serif Display',serif;font-size:clamp(40px,7vw,64px);line-height:1">A letter for you</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:36px;max-width:1180px;width:100%">
+<div style="flex:1 1 220px;max-width:max(280px, calc((700px - 100vw) * 999));display:flex;flex-wrap:wrap;align-items:flex-start;gap:28px 20px;padding-top:20px">
+<div style="flex:1 1 calc((100vw - 700px) * 999);min-width:0;background:#fff;padding:10px 10px 44px;box-shadow:0 8px 22px rgba(80,30,40,.15);transform:rotate(-5deg);position:relative"><img src="img/p03.jpeg" alt="" style="width:100%;aspect-ratio:1/1;object-fit:cover"><div style="position:absolute;bottom:8px;left:0;right:0;text-align:center;font-family:Caveat,cursive;font-size:clamp(19px,4.5vw,24px)">us, always</div><div style="position:absolute;left:35%;top:-12px;width:80px;height:24px;background:rgba(240,195,185,.8);transform:rotate(-10deg)"></div></div>
+<div style="flex:1 1 calc((100vw - 700px) * 999);min-width:0;background:#fff;padding:10px 10px 44px;box-shadow:0 8px 22px rgba(80,30,40,.15);transform:rotate(4deg);position:relative"><img src="img/p07.jpeg" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover"><div style="position:absolute;bottom:8px;left:0;right:0;text-align:center;font-family:Caveat,cursive;font-size:clamp(19px,4.5vw,24px)">my goofball, Cuttu</div></div>
+</div>
+<div style="flex:1 1 420px;min-width:0;max-width:540px;background:#fffaf6;padding:44px clamp(20px,5vw,36px) 40px;box-shadow:0 10px 30px rgba(80,30,40,.14);transform:rotate(-.6deg);background-image:repeating-linear-gradient(transparent 0 37px,#ecd3cf 37px 38px);background-position:0 34px;font-family:Caveat,cursive;position:relative">
+<div style="position:absolute;left:42%;top:-14px;width:100px;height:28px;background:rgba(240,195,185,.85);transform:rotate(3deg)"></div>
+<div style="font-size:42px;line-height:38px;color:#b0465a;margin-bottom:10px">Tanuuuudaaaaa,</div>
+<div style="font-size:26px;line-height:38px;text-wrap:pretty;display:flex;flex-direction:column;gap:38px">
+<div>Happpyyyy happpyyy Tanu divas! Happyyyy birthday my loveee, my lifeeee, my soulmate. Happpyyyy birthdayyyy, wohoooooo! 🥺🥳❤️</div>
+<div>On this day the most important, the most special, the most beautiful, the most intelligent and the most strong human being in the history of earth was bornnn. This human not only does unlimited hard work but single-handedly annoys me, and I wouldn't trade a single second of it.</div>
+<div>From family friends to falling in love (yes yes, you fell first, but I fell harder), these 5–6 years with you have been the best part of my life. And now, in the middle of all the wedding-prep madness, I just want you to stop for a day and feel how loved you are.</div>
+<div>Happy 25th, my Bachu, my Cuttu, my Penguin.</div>
+</div>
+<div style="font-size:34px;line-height:38px;color:#b0465a;margin-top:38px">Your A ♡</div>
+</div>
+<div style="flex:1 1 220px;max-width:max(280px, calc((700px - 100vw) * 999));display:flex;flex-wrap:wrap;align-items:flex-start;gap:28px 20px;padding-top:clamp(0px,6vw,60px)">
+<div style="flex:1 1 calc((100vw - 700px) * 999);min-width:0;background:#fff;padding:10px 10px 44px;box-shadow:0 8px 22px rgba(80,30,40,.15);transform:rotate(5deg);position:relative"><img src="img/p05.jpeg" alt="" style="width:100%;aspect-ratio:4/5;object-fit:cover"><div style="position:absolute;bottom:8px;left:0;right:0;text-align:center;font-family:Caveat,cursive;font-size:clamp(19px,4.5vw,24px)">hand in hand</div><div style="position:absolute;left:30%;top:-12px;width:80px;height:24px;background:rgba(240,195,185,.8);transform:rotate(8deg)"></div></div>
+<div style="flex:1 1 calc((100vw - 700px) * 999);min-width:0;background:#fff;padding:10px 10px 44px;box-shadow:0 8px 22px rgba(80,30,40,.15);transform:rotate(-3deg);position:relative"><img src="img/p04.jpeg" alt="" style="width:100%;aspect-ratio:1/1;object-fit:cover"><div style="position:absolute;bottom:8px;left:0;right:0;text-align:center;font-family:Caveat,cursive;font-size:clamp(19px,4.5vw,24px)">closer than the miles</div></div>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isMoments }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="03 Moments" style="padding:56px 20px 140px;display:flex;flex-direction:column;align-items:center;gap:44px">
+<div style="text-align:center;display:flex;flex-direction:column;gap:6px;width:100%;max-width:900px;margin-bottom:16px">
+<div style="font-family:Caveat,cursive;font-size:30px;color:#b0465a">chapter two</div>
+<div style="font-family:'DM Serif Display',serif;font-size:clamp(40px,7vw,64px);line-height:1">Our little moments</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(24px,5vw,40px) 24px;max-width:1180px;width:100%">
+<div style="width:min(260px, calc(50% - 12px));background:#fff;padding:10px 10px 46px;box-shadow:0 8px 22px rgba(80,30,40,.15);transform:rotate(-3deg);position:relative"><img src="img/p08.jpeg" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover"><div style="position:absolute;bottom:8px;left:0;right:0;text-align:center;font-family:Caveat,cursive;font-size:clamp(18px,4.5vw,25px);line-height:1.1;padding:0 6px">date nights</div></div>
+<div style="width:min(260px, calc(50% - 12px));background:#fff;padding:10px 10px 46px;box-shadow:0 8px 22px rgba(80,30,40,.15);transform:rotate(2deg);position:relative;margin-top:30px"><img src="img/p01.jpeg" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover"><div style="position:absolute;bottom:8px;left:0;right:0;text-align:center;font-family:Caveat,cursive;font-size:clamp(18px,4.5vw,25px);line-height:1.1;padding:0 6px">main character energy</div><div style="position:absolute;left:34%;top:-12px;width:80px;height:24px;background:rgba(240,195,185,.8);transform:rotate(-8deg)"></div></div>
+<div style="width:min(260px, calc(50% - 12px));background:#fff;padding:10px 10px 46px;box-shadow:0 8px 22px rgba(80,30,40,.15);transform:rotate(-1deg);position:relative"><video src="img/v01.mp4#t=0.1" preload="metadata" controls playsinline style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block;background:#3a1e24"></video><div style="position:absolute;bottom:8px;left:0;right:0;text-align:center;font-family:Caveat,cursive;font-size:clamp(18px,4.5vw,25px);line-height:1.1;padding:0 6px">press play ♡</div></div>
+<div style="width:min(260px, calc(50% - 12px));background:#fff;padding:10px 10px 46px;box-shadow:0 8px 22px rgba(80,30,40,.15);transform:rotate(4deg);position:relative;margin-top:20px"><img src="img/p02.jpeg" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover"><div style="position:absolute;bottom:8px;left:0;right:0;text-align:center;font-family:Caveat,cursive;font-size:clamp(18px,4.5vw,25px);line-height:1.1;padding:0 6px">golden hour you</div></div>
+<div style="width:min(260px, calc(50% - 12px));background:#fff;padding:10px 10px 46px;box-shadow:0 8px 22px rgba(80,30,40,.15);transform:rotate(-4deg);position:relative"><img src="img/p09.jpeg" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover"><div style="position:absolute;bottom:8px;left:0;right:0;text-align:center;font-family:Caveat,cursive;font-size:clamp(18px,4.5vw,25px);line-height:1.1;padding:0 6px">my favorite place: next to you</div><div style="position:absolute;left:30%;top:-12px;width:80px;height:24px;background:rgba(240,195,185,.8);transform:rotate(6deg)"></div></div>
+<div style="width:min(260px, calc(50% - 12px));background:#fff;padding:10px 10px 46px;box-shadow:0 8px 22px rgba(80,30,40,.15);transform:rotate(3deg);position:relative;margin-top:24px"><img src="img/p10.jpeg" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover"><div style="position:absolute;bottom:8px;left:0;right:0;text-align:center;font-family:Caveat,cursive;font-size:clamp(18px,4.5vw,25px);line-height:1.1;padding:0 6px">my sunshine</div></div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isReasons }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="04 Reasons" style="padding:56px 20px 140px;display:flex;flex-direction:column;align-items:center;gap:28px">
+<div style="text-align:center;display:flex;flex-direction:column;gap:6px;width:100%;max-width:900px">
+<div style="font-family:Caveat,cursive;font-size:30px;color:#b0465a">chapter three</div>
+<div style="font-family:'DM Serif Display',serif;font-size:clamp(40px,7vw,64px);line-height:1">25 reasons I love you</div>
+<div style="font-size:16px;color:#6b4a50;margin-top:8px">One for every year. Tap a note to open it · {{ openCount }} of 25 opened</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:14px;width:100%;max-width:1100px">
+<sc-for list="{{ reasons }}" as="r" hint-placeholder-count="25">
+<div onClick="{{ r.toggle }}" style="min-height:140px;padding:14px;cursor:pointer;user-select:none;display:flex;flex-direction:column;gap:8px;box-shadow:0 4px 12px rgba(80,30,40,.10);background:{{ r.bg }};transform:rotate({{ r.rot }}deg)" style-hover="box-shadow:0 8px 20px rgba(80,30,40,.18)">
+<div style="font-family:'DM Serif Display',serif;font-size:22px;color:#b0465a">No. {{ r.n }}</div>
+<sc-if value="{{ r.open }}" hint-placeholder-val="{{ false }}"><div style="font-family:Caveat,cursive;font-size:23px;line-height:1.15;text-wrap:pretty">{{ r.text }}</div></sc-if>
+<sc-if value="{{ r.closed }}" hint-placeholder-val="{{ true }}"><div style="font-family:Caveat,cursive;font-size:22px;color:#b98a92;margin-top:auto">tap to open ♡</div></sc-if>
+</div>
+</sc-for>
+</div>
+<div onClick="{{ openAll }}" style="font-size:15px;font-weight:500;color:#b0465a;border:1.5px solid #b0465a;padding:12px 26px;border-radius:999px;cursor:pointer;white-space:nowrap" style-hover="background:#b0465a;color:#fff">Open them all</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isWish }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="05 Wish" style="min-height:100vh;padding:56px 20px 140px;display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center;overflow:hidden">
+<div style="display:flex;flex-direction:column;gap:6px;width:100%;max-width:900px">
+<div style="font-family:Caveat,cursive;font-size:30px;color:#b0465a">the last page</div>
+<div style="font-family:'DM Serif Display',serif;font-size:clamp(40px,7vw,64px);line-height:1">Make a wish</div>
+<div style="font-size:16px;color:#6b4a50;margin-top:8px">{{ wishHint }}</div>
+</div>
+{{ cake }}
+<sc-if value="{{ allOut }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;align-items:center;gap:24px;animation:rise .8s ease both">
+<div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(36px,6vw,56px);color:#b0465a;line-height:1.05">Happy 25th birthday, Tanu</div>
+<div style="width:300px;max-width:100%;background:#fff;padding:12px 12px 52px;box-shadow:0 10px 30px rgba(80,30,40,.18);transform:rotate(-2deg);position:relative"><img src="img/p05.jpeg" alt="" style="width:100%;aspect-ratio:4/5;object-fit:cover"><div style="position:absolute;bottom:10px;left:0;right:0;font-family:Caveat,cursive;font-size:28px">to many more, together</div></div>
+<div style="font-family:Caveat,cursive;font-size:30px;max-width:460px;line-height:1.2">Whatever you wished for, I'll be right here helping it come true.</div>
+</div>
+</sc-if>
+{{ confetti }}
+</div>
+</sc-if>
+
+<sc-if value="{{ showNav }}" hint-placeholder-val="{{ false }}">
+<div style="position:fixed;left:50%;bottom:16px;transform:translateX(-50%);max-width:calc(100vw - 24px);display:flex;align-items:center;gap:6px;background:#fffaf6;padding:8px;border-radius:999px;box-shadow:0 6px 24px rgba(80,30,40,.18);z-index:10">
+<div onClick="{{ prev }}" style="font-size:15px;padding:10px 18px;border-radius:999px;cursor:pointer;color:#6b4a50;white-space:nowrap" style-hover="background:#f6e4e0">← Back</div>
+<div style="font-family:Caveat,cursive;font-size:22px;padding:0 10px;color:#3a1e24;white-space:nowrap">{{ pageLabel }}</div>
+<sc-if value="{{ hasNext }}" hint-placeholder-val="{{ true }}"><div onClick="{{ next }}" style="font-size:15px;font-weight:500;padding:10px 20px;border-radius:999px;cursor:pointer;color:#fff;background:#b0465a;white-space:nowrap" style-hover="background:#8f3446">Next →</div></sc-if>
+</div>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { page: 0, open: {}, lit: [true, true, true, true, true] };
+  pages = ['Cover', 'A letter', 'Moments', '25 reasons', 'Make a wish'];
+  reasons = [
+    "The way you say \"Ayu\" like it's the only word that matters.",
+    "You fell first. I fell harder. Still falling.",
+    "Your determination. Once you decide something, it's done.",
+    "Your smile, the one that fixes my whole day.",
+    "Your eyes. I still get lost in them.",
+    "Your kindness, to everyone, always.",
+    "How you went from a family friend to my whole world.",
+    "You work unlimited hard and still make time for me.",
+    "You single-handedly annoy me, and I love every bit of it.",
+    "The goofy faces in every single selfie.",
+    "My Penguin waddling around when she's sleepy.",
+    "How strong you are, even on the tough days.",
+    "You make wedding-prep stress feel like a joke we're in on together.",
+    "Bachu mode: when you get all cute and clingy.",
+    "You're my calm when everything's loud.",
+    "How you love your family, and mine, like your own.",
+    "Cuttu faces when you want something.",
+    "You believe in me more than I do.",
+    "How every mile between us feels smaller when I hear your voice.",
+    "You're stunning in traditional, and you'll be just as beautiful in my old grey t-shirt (it's yours now).",
+    "How you remember all the little things.",
+    "You're the smartest person I know (don't let it go to your head).",
+    "Every adventure is better because you're next to me.",
+    "Soon I get to call you mine, officially, forever.",
+    "Because you're my Tanu, and there's no one like you."
+  ];
+  componentDidMount() { try { const p = parseInt(localStorage.getItem('tanu25-page')); if (p >= 0 && p < 5) this.setState({ page: p }); } catch (e) {} }
+  go(p) { this.setState({ page: p }); try { localStorage.setItem('tanu25-page', p); } catch (e) {} window.scrollTo(0, 0); }
+  renderVals() {
+    const { page, open, lit } = this.state;
+    const bgs = ['#fffaf6', '#fde9e4', '#fff3df', '#f1e6f3', '#e9f1ea'];
+    const reasons = this.reasons.map((text, i) => ({
+      n: i + 1, text, open: !!open[i], closed: !open[i],
+      bg: open[i] ? '#fffaf6' : bgs[i % 5], rot: ((i * 37) % 7) - 3,
+      toggle: () => this.setState(s => ({ open: { ...s.open, [i]: !s.open[i] } }))
+    }));
+    const outCount = lit.filter(l => !l).length;
+    const allOut = outCount === 5;
+    const h = React.createElement;
+    const candles = lit.map((on, i) => h('div', { key: i, onClick: () => this.setState(s => { const l = [...s.lit]; l[i] = false; return { lit: l }; }), style: { width: 34, height: 110, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end', cursor: on ? 'pointer' : 'default' } },
+      on ? h('div', { style: { width: 16, height: 28, borderRadius: '50% 50% 50% 50% / 60% 60% 40% 40%', background: 'radial-gradient(circle at 50% 70%, #fff6c8, #ffb648 55%, #ff7a3d)', boxShadow: '0 0 18px 6px rgba(255,190,90,.45)', animation: 'flick ' + (0.5 + i * 0.07) + 's ease-in-out infinite', transformOrigin: '50% 100%', marginBottom: 4 } })
+         : h('div', { style: { fontFamily: 'Caveat,cursive', fontSize: 18, color: '#b98a92', marginBottom: 6 } }, '~'),
+      h('div', { style: { width: 2, height: 8, background: '#3a1e24' } }),
+      h('div', { style: { width: 12, height: 60, borderRadius: 3, background: i % 2 ? 'repeating-linear-gradient(45deg,#b0465a 0 6px,#fffaf6 6px 12px)' : 'repeating-linear-gradient(45deg,#e9b8bf 0 6px,#fffaf6 6px 12px)' } })));
+    const cake = h('div', { style: { display: 'flex', flexDirection: 'column', alignItems: 'center' } },
+      h('div', { style: { display: 'flex', gap: 14, marginBottom: -4, position: 'relative', zIndex: 1 } }, candles),
+      h('div', { style: { width: 300, maxWidth: '70vw', height: 70, background: '#fffaf6', borderRadius: '14px 14px 0 0', borderBottom: '10px solid #e9b8bf', boxShadow: 'inset 0 -6px 0 #f6d3d7' } }),
+      h('div', { style: { width: 340, maxWidth: '80vw', height: 80, background: '#b0465a', borderRadius: '0 0 10px 10px', backgroundImage: 'radial-gradient(#fffaf6 3px, transparent 3.5px)', backgroundSize: '28px 28px', backgroundPosition: '8px 20px' } }),
+      h('div', { style: { width: 400, maxWidth: '92vw', height: 14, background: '#e5cfc9', borderRadius: 999 } }));
+    const confetti = allOut ? h('div', { style: { position: 'fixed', inset: 0, pointerEvents: 'none', overflow: 'hidden', zIndex: 5 } },
+      Array.from({ length: 40 }, (_, i) => h('div', { key: i, style: { position: 'absolute', left: ((i * 53) % 100) + '%', top: 0, fontSize: 14 + (i % 4) * 6, color: ['#b0465a', '#e9b8bf', '#f2c46d', '#c98bb0'][i % 4], animation: 'fall ' + (4 + (i % 5)) + 's linear ' + ((i % 10) * 0.35) + 's infinite' } }, i % 3 ? '♥' : '✦'))) : null;
+    return {
+      isCover: page === 0, isLetter: page === 1, isMoments: page === 2, isReasons: page === 3, isWish: page === 4,
+      showNav: page > 0, hasNext: page < 4, pageLabel: `${page + 1} of 5`,
+      next: () => this.go(Math.min(4, page + 1)), prev: () => this.go(Math.max(0, page - 1)),
+      restart: () => { this.setState({ lit: [true, true, true, true, true], open: {} }); this.go(0); },
+      reasons, openCount: Object.values(open).filter(Boolean).length,
+      openAll: () => this.setState({ open: Object.fromEntries(this.reasons.map((_, i) => [i, true])) }),
+      cake, confetti, allOut,
+      wishHint: allOut ? 'Wish made. Now it has to come true.' : `Close your eyes, make a wish, then tap each candle to blow it out (${5 - outCount} left).`
+    };
+  }
+}
+</script>
+</body>
+</html>
